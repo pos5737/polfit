@@ -8,7 +8,7 @@ state_df <- df %>%
   summarize(avg_ideology = mean(ideology)) %>%
   mutate(state = reorder(state, avg_ideology)) %>%
   glimpse()
-ggplot(agg_df, aes(x = avg_ideology, y = state)) + 
+ggplot(state_df, aes(x = avg_ideology, y = state)) + 
   geom_point()
 
 # questions 3 and 4
